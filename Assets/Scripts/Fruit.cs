@@ -144,6 +144,7 @@ public class Fruit : MonoBehaviour
             Instantiate(this.gameObject, transform.position, Quaternion.identity).GetComponent<Fruit>().initialize(genIndex);
             psBurst();
             manager.addPoints(bounty);
+            player.comboHandler();
             audioSrc.transform.SetParent(null);
             Destroy(gameObject);
         }
